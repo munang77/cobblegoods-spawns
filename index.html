@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CobbleGoods 전설 스폰 도감</title>
+<style>
+:root{--bg:#0e1017;--panel:#171a24;--panel2:#1e2230;--line:#2b3040;--txt:#e6e9f0;--mut:#96a0b5;--gold:#f2c94c;--pink:#f178b6;--acc:#6ea8fe;}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#0b0d14,#0e1017 320px);color:var(--txt);font-family:"Segoe UI",system-ui,Roboto,"Malgun Gothic",sans-serif;line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px 80px}
+header{padding:44px 16px 28px;text-align:center}
+h1{margin:0 0 6px;font-size:30px;letter-spacing:-.5px}
+h1 .g{color:var(--gold)}
+.sub{color:var(--mut);font-size:15px;margin:0}
+.grid{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card h2{margin:0 0 12px;font-size:17px;display:flex;align-items:center;gap:8px}
+.card h2 .dot{width:9px;height:9px;border-radius:50%}
+.tbl{width:100%;border-collapse:collapse;font-size:14px}
+.tbl th,.tbl td{padding:7px 8px;text-align:left;border-bottom:1px solid var(--line)}
+.tbl th{color:var(--mut);font-weight:500;font-size:12.5px}
+.tbl tr:last-child td{border-bottom:none}
+.mon{font-weight:600}
+.en{color:var(--mut);font-size:12.5px}
+.pct{text-align:right;color:var(--gold)}
+.mech td:first-child{color:var(--mut)}
+.mech td:last-child{text-align:right}
+.note{background:var(--panel2);border:1px dashed var(--line);border-radius:12px;padding:14px 16px;color:var(--mut);font-size:13.5px;margin-top:16px}
+.controls{position:sticky;top:0;background:rgba(14,16,23,.92);backdrop-filter:blur(6px);padding:14px 0;margin:26px 0 6px;z-index:5;border-bottom:1px solid var(--line)}
+.controls input{width:100%;padding:11px 14px;background:var(--panel2);border:1px solid var(--line);border-radius:10px;color:var(--txt);font-size:15px}
+.filters{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+.chip{cursor:pointer;user-select:none;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--mut);font-size:13px}
+.chip.on{background:var(--acc);border-color:var(--acc);color:#0b0d14;font-weight:600}
+.count{color:var(--mut);font-size:13px;margin:14px 2px 8px}
+.list{display:grid;gap:9px}
+.row{display:grid;grid-template-columns:155px 1fr auto;gap:12px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+@media(max-width:640px){.row{grid-template-columns:1fr;gap:7px}}
+.row .name b{font-size:15.5px}
+.row .name .en{display:block}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.t{font-size:12px;padding:3px 9px;border-radius:999px;background:var(--panel2);border:1px solid var(--line);color:var(--mut)}
+.t.b{color:#cbb2ff;border-color:#4b3d78}
+.t.d{color:#ffe08a;border-color:#6b5a25}
+.t.th{color:#8fc7ff;border-color:#2e4a72}
+.t.rn{color:#7fe0e6;border-color:#245e63}
+.t.cl{color:#ffc38f;border-color:#6b4a28}
+.t.mo{color:#b9b2ff;border-color:#403a78}
+.cat{font-size:11.5px;padding:2px 9px;border-radius:999px;font-weight:600;margin-left:4px}
+.cat.legendary{color:#0b0d14;background:var(--gold)}
+.cat.mythical{color:#0b0d14;background:var(--pink)}
+.meta{color:var(--mut);font-size:12.5px;text-align:right;white-space:nowrap}
+.meta b{color:var(--txt)}
+.bio{color:var(--txt);font-size:13.5px}
+.origin{border-color:#5b45a8;box-shadow:inset 0 0 0 1px #35276b}
+footer{text-align:center;color:var(--mut);font-size:12.5px;margin-top:40px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1><span class="g">CobbleGoods</span> 전설 스폰 도감</h1>
+<p class="sub">Cobblemon + Myths and Legends 기준 · 전설 61종 · 환상 20종 · 바이옴/시간/날씨/확률</p>
+</header>
+
+<div class="grid">
+<div class="card">
+<h2><span class="dot" style="background:var(--gold)"></span>2시간 전설 이벤트 (확정)</h2>
+<table class="tbl">
+<thead><tr><th>포켓몬</th><th>영문</th><th>확률</th></tr></thead>
+<tbody><tr><td class="mon">파이어</td><td class="en">Moltres</td><td class="pct"><b>32%</b></td></tr>
+<tr><td class="mon">프리져</td><td class="en">Articuno</td><td class="pct"><b>31%</b></td></tr>
+<tr><td class="mon">썬더</td><td class="en">Zapdos</td><td class="pct"><b>31%</b></td></tr>
+<tr><td class="mon">뮤</td><td class="en">Mew</td><td class="pct"><b>3%</b></td></tr>
+<tr><td class="mon">뮤츠</td><td class="en">Mewtwo</td><td class="pct"><b>3%</b></td></tr></tbody>
+</table>
+<p class="sub" style="margin-top:10px;font-size:13px">서버 2시간마다 랜덤 온라인 플레이어 위치에 1마리 스폰(레벨 58~70). 이 5종은 기본 모델이 있어 정상 모습입니다.</p>
+</div>
+
+<div class="card">
+<h2><span class="dot" style="background:var(--acc)"></span>자연 스폰 확률 구조</h2>
+<table class="tbl mech">
+<thead><tr><th>등급(버킷)</th><th>등급이 뽑힐 확률</th></tr></thead>
+<tbody>
+<tr><td>common</td><td>약 94.3%</td></tr>
+<tr><td>uncommon</td><td>약 5.0%</td></tr>
+<tr><td>rare</td><td>약 0.5%</td></tr>
+<tr><td><b style="color:var(--gold)">ultra-rare</b> (전설)</td><td><b>약 0.2%</b></td></tr>
+</tbody>
+</table>
+<p class="sub" style="margin-top:10px;font-size:13px">매 스폰마다 등급을 먼저 뽑고, 그 등급 안에서 조건 맞는 후보를 <b>weight</b> 비율로 고릅니다. 전설은 전부 ultra-rare(0.2%) + 바이옴·시간·날씨까지 맞아야 후보가 됩니다. (전설 weight = 3)</p>
+</div>
+</div>
+
+<div class="note">
+<b>울트라비스트 안내</b> — 현재 스폰 데이터(Myths and Legends 기반)에는 울트라비스트·패러독스가 포함돼 있지 않습니다(0종). 필요하면 추가할 수 있습니다.<br>
+<b>모델 안내</b> — 코블몬 기본 구현 종(프리져·썬더·파이어·뮤·뮤츠·루기아·칠색조·삼신조·레지 계열 등)만 정상 모습이고, 나머지(아르세우스·디아루가·펄기아 포함)는 모델 애드온이 없으면 분홍 대타 인형으로 나옵니다.
+</div>
+
+<div class="controls">
+<input id="q" placeholder="이름 검색 (한글/영문)  예: 파이어, mewtwo, 레지">
+<div class="filters" id="filters">
+<span class="chip on" data-f="all">전체</span>
+<span class="chip" data-f="legendary">전설</span>
+<span class="chip" data-f="mythical">환상</span>
+<span class="chip" data-f="origin">기원의 세계</span>
+<span class="chip" data-f="night">밤</span>
+<span class="chip" data-f="day">낮</span>
+<span class="chip" data-f="thunder">천둥</span>
+<span class="chip" data-f="rain">비</span>
+</div>
+</div>
+<div class="count" id="count"></div>
+<div class="list" id="list"></div>
+
+<footer>CobbleGoods · 데이터는 모드 스폰 파일에서 자동 생성 · Pokémon © Nintendo/Game Freak</footer>
+</div>
+
+<script>
+const DATA = [{"ko": "디아루가", "en": "Dialga", "id": "dialga", "cat": "legendary", "catko": "전설", "src": "origin", "biomes": ["기원의 세계 (전용 차원)"], "cond": [], "condtag": [], "level": "70-80", "weight": 6.0}, {"ko": "펄기아", "en": "Palkia", "id": "palkia", "cat": "legendary", "catko": "전설", "src": "origin", "biomes": ["기원의 세계 (전용 차원)"], "cond": [], "condtag": [], "level": "70-80", "weight": 6.0}, {"ko": "아르세우스", "en": "Arceus", "id": "arceus", "cat": "mythical", "catko": "환상", "src": "origin", "biomes": ["기원의 세계 (전용 차원)"], "cond": [], "condtag": [], "level": "80", "weight": 6.0}, {"ko": "가이오가", "en": "Kyogre", "id": "kyogre", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["차가운 깊은 바다", "언 깊은 바다", "깊은 바다", "바다", "바다류"], "cond": ["비"], "condtag": ["rain"], "level": "45-70", "weight": 3.0}, {"ko": "그란돈", "en": "Groudon", "id": "groudon", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["악지(메사)", "사막", "침식된 악지", "건조", "열대성", "화산"], "cond": ["낮", "맑음"], "condtag": ["day", "clear"], "level": "45-70", "weight": 3.0}, {"ko": "기라티나", "en": "Giratina", "id": "giratina", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["네더 황무지", "소울 샌드 계곡", "엔드", "음산", "네더"], "cond": ["밤"], "condtag": ["night"], "level": "47-70", "weight": 3.0}, {"ko": "네크로즈마", "en": "Necrozma", "id": "necrozma", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["엔드 황무지", "엔드 고지", "엔드 중지", "작은 엔드 섬", "엔드", "깊은 어둠"], "cond": ["밤"], "condtag": ["night"], "level": "70", "weight": 3.0}, {"ko": "라이코", "en": "Raikou", "id": "raikou", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["평원", "사바나", "사바나 고원", "건조", "초원", "평원류"], "cond": ["천둥"], "condtag": ["thunder"], "level": "50-60", "weight": 3.0}, {"ko": "라티아스", "en": "Latias", "id": "latias", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["자작나무 숲", "꽃 숲", "해변류", "해안", "온대"], "cond": [], "condtag": [], "level": "30-50", "weight": 3.0}, {"ko": "라티오스", "en": "Latios", "id": "latios", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["평원", "바람 언덕", "해변류", "해안", "온대"], "cond": [], "condtag": [], "level": "30-50", "weight": 3.0}, {"ko": "랜드로스", "en": "Landorus", "id": "landorus", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["사막", "사바나", "해바라기 평원"], "cond": ["천둥"], "condtag": ["thunder"], "level": "50-70", "weight": 3.0}, {"ko": "러브로스", "en": "Enamorus", "id": "enamorus", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["벚꽃 숲", "꽃 숲", "목초지"], "cond": ["낮", "천둥"], "condtag": ["day", "thunder"], "level": "50-70", "weight": 3.0}, {"ko": "레시라무", "en": "Reshiram", "id": "reshiram", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["사막", "사바나", "해바라기 평원"], "cond": ["낮"], "condtag": ["day"], "level": "60-70", "weight": 3.0}, {"ko": "레이스포스", "en": "Spectrier", "id": "spectrier", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["어둠의 숲", "숲류", "평원류", "음산"], "cond": ["밤"], "condtag": ["night"], "level": "70", "weight": 3.0}, {"ko": "레지기가스", "en": "Regigigas", "id": "regigigas", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["사바나 고원", "깊은 어둠", "사바나류"], "cond": [], "condtag": [], "level": "70", "weight": 3.0}, {"ko": "레지드라고", "en": "Regidrago", "id": "regidrago", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["엔드 황무지", "엔드 고지", "엔드 중지", "작은 엔드 섬", "엔드", "네더"], "cond": [], "condtag": [], "level": "40", "weight": 3.0}, {"ko": "레지락", "en": "Regirock", "id": "regirock", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["사막", "악지류"], "cond": [], "condtag": [], "level": "70", "weight": 3.0}, {"ko": "레지스틸", "en": "Registeel", "id": "registeel", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["깊은 어둠"], "cond": [], "condtag": [], "level": "40", "weight": 3.0}, {"ko": "레지아이스", "en": "Regice", "id": "regice", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["언 강", "뾰족 봉우리", "눈 해변", "설원", "눈 비탈", "혹한", "언 바다", "빙하", "봉우리", "눈 숲", "타이가류", "툰드라"], "cond": ["비"], "condtag": ["rain"], "level": "70", "weight": 3.0}, {"ko": "레지에레키", "en": "Regieleki", "id": "regieleki", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["깊은 어둠"], "cond": ["천둥"], "condtag": ["thunder"], "level": "70", "weight": 3.0}, {"ko": "레쿠쟈", "en": "Rayquaza", "id": "rayquaza", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["엔드 고지", "엔드", "고지대", "정글류", "고공"], "cond": [], "condtag": [], "level": "50-70", "weight": 3.0}, {"ko": "루기아", "en": "Lugia", "id": "lugia", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["깊은 바다", "바다", "cold ocean", "바다류"], "cond": ["비"], "condtag": ["rain"], "level": "40-70", "weight": 3.0}, {"ko": "루나아라", "en": "Lunala", "id": "lunala", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["어둠의 숲", "언덕"], "cond": ["밤"], "condtag": ["night"], "level": "70-80", "weight": 3.0}, {"ko": "무한다이노", "en": "Eternatus", "id": "eternatus", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["엔드 황무지", "엔드 고지", "엔드 중지", "맹그로브 늪", "작은 엔드 섬", "늪", "엔드"], "cond": ["밤"], "condtag": ["night"], "level": "70", "weight": 3.0}, {"ko": "뮤츠", "en": "Mewtwo", "id": "mewtwo", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["어둠의 숲", "깊은 어둠", "바람 자갈 언덕", "동굴", "음산"], "cond": ["밤"], "condtag": ["night"], "level": "70-75", "weight": 3.0}, {"ko": "미라이돈", "en": "Miraidon", "id": "miraidon", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["깊은 어둠", "바람 자갈 언덕"], "cond": ["천둥"], "condtag": ["thunder"], "level": "68-72", "weight": 3.0}, {"ko": "버드렉스", "en": "Calyrex", "id": "calyrex", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["꽃 숲", "숲류"], "cond": ["밤"], "condtag": ["night"], "level": "70", "weight": 3.0}, {"ko": "볼트로스", "en": "Thundurus", "id": "thundurus", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["악지(메사)", "평원", "바람 언덕"], "cond": ["천둥"], "condtag": ["thunder"], "level": "50-70", "weight": 3.0}, {"ko": "블리자포스", "en": "Glastrier", "id": "glastrier", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["산악", "눈 숲", "타이가류"], "cond": ["비"], "condtag": ["rain"], "level": "70", "weight": 3.0}, {"ko": "비리디온", "en": "Virizion", "id": "virizion", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["고지대", "언덕", "hill", "산악"], "cond": ["낮"], "condtag": ["day"], "level": "70", "weight": 3.0}, {"ko": "솔가레오", "en": "Solgaleo", "id": "solgaleo", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["사막", "고원"], "cond": ["낮"], "condtag": ["day"], "level": "70-80", "weight": 3.0}, {"ko": "스이쿤", "en": "Suicune", "id": "suicune", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["언 강", "강", "cold ocean", "freshwater"], "cond": ["비"], "condtag": ["rain"], "level": "50-60", "weight": 3.0}, {"ko": "썬더", "en": "Zapdos", "id": "zapdos", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["평원", "사바나", "산악", "고공"], "cond": ["천둥"], "condtag": ["thunder"], "level": "50-60", "weight": 3.0}, {"ko": "아그놈", "en": "Azelf", "id": "azelf", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["맹그로브 늪", "늪", "freshwater", "강"], "cond": ["밤"], "condtag": ["night"], "level": "50", "weight": 3.0}, {"ko": "앤테이", "en": "Entei", "id": "entei", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["악지(메사)", "침식된 악지", "네더 황무지", "사바나", "바람 숲", "바람 언덕", "악지류", "열대성", "화산"], "cond": ["낮"], "condtag": ["day"], "level": "50-60", "weight": 3.0}, {"ko": "엠라이트", "en": "Mesprit", "id": "mesprit", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["맹그로브 늪", "늪", "freshwater", "강"], "cond": ["밤"], "condtag": ["night"], "level": "50", "weight": 3.0}, {"ko": "오거폰", "en": "Ogerpon", "id": "ogerpon", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["대나무", "꽃밭", "정글류"], "cond": ["낮", "보름달 무렵"], "condtag": ["day", "moon"], "level": "40-60", "weight": 3.0}, {"ko": "유크시", "en": "Uxie", "id": "uxie", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["맹그로브 늪", "늪", "freshwater", "강"], "cond": ["밤"], "condtag": ["night"], "level": "50", "weight": 3.0}, {"ko": "이벨타르", "en": "Yveltal", "id": "yveltal", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["어둠의 숲", "늪", "음산", "툰드라"], "cond": ["밤"], "condtag": ["night"], "level": "50", "weight": 3.0}, {"ko": "자마젠타", "en": "Zamazenta", "id": "zamazenta", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["타이가", "바람 숲", "고지대", "고원", "사바나류"], "cond": ["낮"], "condtag": ["day"], "level": "70", "weight": 3.0}, {"ko": "자시안", "en": "Zacian", "id": "zacian", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["꽃 숲", "목초지", "숲류", "고지대", "신비"], "cond": ["낮"], "condtag": ["day"], "level": "70", "weight": 3.0}, {"ko": "제르네아스", "en": "Xerneas", "id": "xerneas", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["꽃 숲", "숲", "목초지", "꽃밭", "숲류", "신비"], "cond": ["낮"], "condtag": ["day"], "level": "50", "weight": 3.0}, {"ko": "제크로무", "en": "Zekrom", "id": "zekrom", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["어둠의 숲", "늪"], "cond": ["천둥"], "condtag": ["thunder"], "level": "60-70", "weight": 3.0}, {"ko": "지가르데", "en": "Zygarde", "id": "zygarde", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["자작나무 숲", "숲", "정글", "맹그로브 늪", "늪", "동굴", "숲류", "늪류"], "cond": [], "condtag": [], "level": "70", "weight": 3.0}, {"ko": "치고마", "en": "Kubfu", "id": "kubfu", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["대나무", "정글류"], "cond": ["낮"], "condtag": ["day"], "level": "15", "weight": 3.0}, {"ko": "칠색조", "en": "Ho-Oh", "id": "hooh", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["꽃 숲", "목초지", "해바라기 평원", "사바나류", "고공"], "cond": ["낮", "맑음"], "condtag": ["day", "clear"], "level": "40-70", "weight": 3.0}, {"ko": "카푸꼬꼬꼭", "en": "Tapu Koko", "id": "tapukoko", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["돌 해안", "해변류", "정글류"], "cond": ["천둥"], "condtag": ["thunder"], "level": "60", "weight": 3.0}, {"ko": "카푸나비나", "en": "Tapu Lele", "id": "tapulele", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["돌 해안", "해변류", "정글류"], "cond": ["밤"], "condtag": ["night"], "level": "60", "weight": 3.0}, {"ko": "카푸느지느", "en": "Tapu Fini", "id": "tapufini", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["돌 해안", "해변류", "정글류"], "cond": ["비"], "condtag": ["rain"], "level": "60", "weight": 3.0}, {"ko": "카푸브루루", "en": "Tapu Bulu", "id": "tapubulu", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["돌 해안", "해변류", "정글류"], "cond": ["낮"], "condtag": ["day"], "level": "60", "weight": 3.0}, {"ko": "코라이돈", "en": "Koraidon", "id": "koraidon", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["악지(메사)", "침식된 악지", "사바나", "사바나 고원", "산악", "고원", "사바나류"], "cond": ["낮"], "condtag": ["day"], "level": "68-72", "weight": 3.0}, {"ko": "코바르온", "en": "Cobalion", "id": "cobalion", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["고지대", "언덕", "hill", "산악"], "cond": [], "condtag": [], "level": "70", "weight": 3.0}, {"ko": "코스모그", "en": "Cosmog", "id": "cosmog", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["벚꽃 숲", "엔드 황무지", "엔드 고지", "엔드 중지", "꽃 숲", "목초지", "작은 엔드 섬", "해바라기 평원", "엔드"], "cond": ["밤"], "condtag": ["night"], "level": "15", "weight": 3.0}, {"ko": "큐레무", "en": "Kyurem", "id": "kyurem", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["얼음 봉우리", "눈 비탈", "눈 타이가", "혹한", "빙하", "눈 숲"], "cond": ["비"], "condtag": ["rain"], "level": "75", "weight": 3.0}, {"ko": "크레세리아", "en": "Cresselia", "id": "cresselia", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["버섯 섬", "설원"], "cond": ["밤", "보름달 무렵", "하늘 보이는 곳"], "condtag": ["night", "moon", "sky"], "level": "50-70", "weight": 3.0}, {"ko": "타입널", "en": "Type: Null", "id": "typenull", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["엔드 황무지", "엔드 고지", "엔드 중지", "작은 엔드 섬", "엔드", "깊은 어둠"], "cond": [], "condtag": [], "level": "60", "weight": 3.0}, {"ko": "테라키온", "en": "Terrakion", "id": "terrakion", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["고지대", "언덕", "hill", "산악"], "cond": [], "condtag": [], "level": "70", "weight": 3.0}, {"ko": "테라파고스", "en": "Terapagos", "id": "terapagos", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["정글류", "신비", "산악", "강"], "cond": [], "condtag": [], "level": "75", "weight": 3.0}, {"ko": "토네로스", "en": "Tornadus", "id": "tornadus", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["대나무 정글", "정글", "드문 정글"], "cond": ["천둥"], "condtag": ["thunder"], "level": "50-70", "weight": 3.0}, {"ko": "파이어", "en": "Moltres", "id": "moltres", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["악지(메사)", "바람 언덕", "고공", "열대성", "화산"], "cond": ["낮"], "condtag": ["day"], "level": "50-60", "weight": 3.0}, {"ko": "프리져", "en": "Articuno", "id": "articuno", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["frozen ocean", "얼음 봉우리", "언 강", "눈 해변", "설원", "눈 비탈", "눈 타이가", "한랭", "혹한", "언 바다", "빙하", "눈 숲"], "cond": ["비"], "condtag": ["rain"], "level": "50-60", "weight": 3.0}, {"ko": "히드런", "en": "Heatran", "id": "heatran", "cat": "legendary", "catko": "전설", "src": "biome", "biomes": ["현무암 삼각주", "진홍 숲", "네더 황무지"], "cond": ["낮"], "condtag": ["day"], "level": "50-70", "weight": 3.0}, {"ko": "게노세크트", "en": "Genesect", "id": "genesect", "cat": "mythical", "catko": "환상", "src": "biome", "biomes": ["엔드 황무지", "엔드 고지", "엔드 중지", "작은 엔드 섬", "엔드", "깊은 어둠"], "cond": ["낮"], "condtag": ["day"], "level": "70", "weight": 3.0}, {"ko": "다크라이", "en": "Darkrai", "id": "darkrai", "cat": "mythical", "catko": "환상", "src": "biome", "biomes": ["어둠의 숲", "늪", "깊은 어둠", "음산"], "cond": ["밤"], "condtag": ["night"], "level": "40-50", "weight": 3.0}, {"ko": "디안시", "en": "Diancie", "id": "diancie", "cat": "mythical", "catko": "환상", "src": "biome", "biomes": ["종유석 동굴", "무성한 동굴", "동굴"], "cond": [], "condtag": [], "level": "70", "weight": 3.0}, {"ko": "마기아나", "en": "Magearna", "id": "magearna", "cat": "mythical", "catko": "환상", "src": "biome", "biomes": ["엔드 황무지", "엔드 고지", "엔드 중지", "작은 엔드 섬", "엔드", "깊은 어둠"], "cond": [], "condtag": [], "level": "50", "weight": 3.0}, {"ko": "마샤도", "en": "Marshadow", "id": "marshadow", "cat": "mythical", "catko": "환상", "src": "biome", "biomes": ["어둠의 숲", "늪", "깊은 어둠", "음산"], "cond": ["낮"], "condtag": ["day"], "level": "70", "weight": 3.0}, {"ko": "메로엣타", "en": "Meloetta", "id": "meloetta", "cat": "mythical", "catko": "환상", "src": "biome", "biomes": ["벚꽃 숲", "꽃 숲", "목초지", "해바라기 평원"], "cond": [], "condtag": [], "level": "50", "weight": 3.0}, {"ko": "멜탄", "en": "Meltan", "id": "meltan", "cat": "mythical", "catko": "환상", "src": "biome", "biomes": ["눈 타이가", "타이가", "바람 언덕"], "cond": [], "condtag": [], "level": "20-40", "weight": 3.0}, {"ko": "뮤", "en": "Mew", "id": "mew", "cat": "mythical", "catko": "환상", "src": "biome", "biomes": ["대나무 정글", "정글", "대나무", "정글류", "무성"], "cond": ["밤"], "condtag": ["night"], "level": "30-70", "weight": 3.0}, {"ko": "복숭악동", "en": "Pecharunt", "id": "pecharunt", "cat": "mythical", "catko": "환상", "src": "biome", "biomes": ["어둠의 숲", "늪"], "cond": ["밤"], "condtag": ["night"], "level": "70", "weight": 3.0}, {"ko": "볼케니온", "en": "Volcanion", "id": "volcanion", "cat": "mythical", "catko": "환상", "src": "biome", "biomes": ["화산", "네더"], "cond": ["낮"], "condtag": ["day"], "level": "70", "weight": 3.0}, {"ko": "비크티니", "en": "Victini", "id": "victini", "cat": "mythical", "catko": "환상", "src": "biome", "biomes": ["악지(메사)", "침식된 악지", "사바나", "사바나류", "열대성", "화산"], "cond": ["밤"], "condtag": ["night"], "level": "70-100", "weight": 3.0}, {"ko": "세레비", "en": "Celebi", "id": "celebi", "cat": "mythical", "catko": "환상", "src": "biome", "biomes": ["자작나무 숲", "벚꽃 숲", "어둠의 숲", "꽃 숲", "숲", "정글", "맹그로브 늪", "목초지", "원시 자작나무 숲", "원시 소나무 타이가", "원시 가문비 타이가", "늪", "꽃밭", "숲류", "무성", "신비"], "cond": ["밤"], "condtag": ["night"], "level": "30-70", "weight": 3.0}, {"ko": "쉐이미", "en": "Shaymin", "id": "shaymin", "cat": "mythical", "catko": "환상", "src": "biome", "biomes": ["꽃 숲", "목초지", "해바라기 평원", "꽃밭", "초원", "무성"], "cond": ["낮"], "condtag": ["day"], "level": "70", "weight": 3.0}, {"ko": "자루도", "en": "Zarude", "id": "zarude", "cat": "mythical", "catko": "환상", "src": "biome", "biomes": ["정글류"], "cond": ["밤"], "condtag": ["night"], "level": "70", "weight": 3.0}, {"ko": "제라오라", "en": "Zeraora", "id": "zeraora", "cat": "mythical", "catko": "환상", "src": "biome", "biomes": ["사바나류"], "cond": ["천둥"], "condtag": ["thunder"], "level": "70", "weight": 3.0}, {"ko": "지라치", "en": "Jirachi", "id": "jirachi", "cat": "mythical", "catko": "환상", "src": "biome", "biomes": ["버섯 섬", "드문 정글", "바람 자갈 언덕", "신비"], "cond": [], "condtag": [], "level": "5-70", "weight": 3.0}, {"ko": "케르디오", "en": "Keldeo", "id": "keldeo", "cat": "mythical", "catko": "환상", "src": "biome", "biomes": ["고지대", "언덕", "hill", "산악"], "cond": ["비"], "condtag": ["rain"], "level": "70", "weight": 3.0}, {"ko": "테오키스", "en": "Deoxys", "id": "deoxys", "cat": "mythical", "catko": "환상", "src": "biome", "biomes": ["엔드 황무지", "엔드 고지", "엔드 중지", "작은 엔드 섬", "엔드"], "cond": ["밤"], "condtag": ["night"], "level": "75", "weight": 3.0}, {"ko": "후파", "en": "Hoopa", "id": "hoopa", "cat": "mythical", "catko": "환상", "src": "biome", "biomes": ["엔드 황무지", "엔드 고지", "엔드 중지", "작은 엔드 섬", "엔드"], "cond": ["밤"], "condtag": ["night"], "level": "50", "weight": 3.0}];
+const CT = {night:"b",day:"d",thunder:"th",rain:"rn",clear:"cl",moon:"mo",sky:""};
+let filter="all", q="";
+function esc(s){return (s+"").replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
+function render(){
+  const list=document.getElementById('list'); list.innerHTML="";
+  let n=0;
+  DATA.forEach(d=>{
+    if(filter!=="all"){
+      if(["legendary","mythical"].includes(filter) && d.cat!==filter) return;
+      if(filter==="origin" && d.src!=="origin") return;
+      if(["night","day","thunder","rain"].includes(filter) && !d.condtag.includes(filter)) return;
+    }
+    if(q){ const s=(d.ko+" "+d.en+" "+d.id).toLowerCase(); if(!s.includes(q)) return; }
+    n++;
+    const tags=d.cond.map((c,i)=>'<span class="t '+(CT[d.condtag[i]]||'')+'">'+esc(c)+'</span>').join("");
+    const bio=d.biomes.map(esc).join(", ");
+    const row=document.createElement('div');
+    row.className="row"+(d.src==="origin"?" origin":"");
+    row.innerHTML=
+      '<div class="name"><b>'+esc(d.ko)+'</b><span class="cat '+d.cat+'">'+esc(d.catko)+'</span><span class="en">'+esc(d.en)+'</span></div>'+
+      '<div><div class="bio">'+bio+'</div><div class="tags" style="margin-top:6px">'+(tags||'<span class="t">조건 없음</span>')+'</div></div>'+
+      '<div class="meta">Lv <b>'+esc(d.level)+'</b><br>weight '+d.weight+'</div>';
+    list.appendChild(row);
+  });
+  document.getElementById('count').textContent=n+"종 표시";
+}
+document.getElementById('q').addEventListener('input',e=>{q=e.target.value.trim().toLowerCase();render();});
+document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
+  document.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));
+  c.classList.add('on'); filter=c.dataset.f; render();
+}));
+render();
+</script>
+</body>
+</html>
